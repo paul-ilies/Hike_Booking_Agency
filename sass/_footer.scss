@@ -1,0 +1,90 @@
+.footer {
+  background-color: #333;
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+
+  @media only screen and (max-width: $bp-largest) {
+    flex-direction: column;
+  }
+
+  &__navigation {
+    border-top: 1px solid #f7f7f7;
+    padding: 0 1rem;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-largest) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__logo {
+    width: 20rem;
+    height: 20rem;
+    transition: all 0.3s;
+
+    @media only screen and (max-width: $bp-largest) {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    &:hover {
+      transform: scale(1.3);
+
+      @media only screen and (max-width: $bp-largest) {
+        transform: none;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+
+    @media only screen and (max-width: 50rem) {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+
+      @media only screen and (max-width: 50rem) {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: #f7f7f7;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all 0.2s;
+      background-color: #333;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary;
+      box-shadow: 0 1rem 2rem rgba(black, 0.4);
+      transform: rotate(-5deg) scale(1.3);
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid #f7f7f7;
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+}

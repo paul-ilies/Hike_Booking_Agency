@@ -1,0 +1,140 @@
+.section-book {
+  padding: 30rem;
+  
+
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.4rem;
+    
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 0;
+  }
+}
+
+.book {
+
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(black, 0.5);
+  
+
+  @media only screen and (max-width: $bp-small) {
+    box-shadow: none;
+    background-image: none;
+  }
+
+  &__form {
+    
+    position: relative;
+    height: 100vh;
+    
+    
+
+    @media only screen and (max-width: $bp-largest) {
+      display: flex;
+      justify-content: center;
+     
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      width: 100%;
+      height: 70vh;
+      padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0;
+      margin: 3rem 0;
+    }
+  }
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    color: #777;
+    display: block;
+    font-size: 1.6rem;
+    padding: 0;
+  }
+}
+
+.form-control input,
+textarea {
+  border: 2px solid #f0f0f0;
+}
+
+.form-control input,
+textarea,
+small,
+label {
+  border-radius: 4px;
+  width: 50%;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-size: 1.4rem;
+  font-family: inherit;
+  margin: 0 auto;
+ 
+
+
+
+  @media only screen and (max-width: $bp-largest) {
+    width: 100%;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: #777;
+  }
+}
+
+.form-control.success input {
+  border-color: $color-success;
+}
+.form-control.error input {
+  border-color: $color-error;
+}
+
+.form-control.success textarea {
+  border-color: $color-success;
+}
+.form-control.error textarea {
+  border-color: $color-error;
+}
+
+.form-control small {
+  color: $color-error;
+
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+small {
+  font-size: 1.4rem;
+}
+
+.form_control {
+  position: relative;
+}
+
+.form_container button {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.form__header {
+  padding-top: 4rem;
+}

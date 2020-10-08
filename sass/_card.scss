@@ -1,0 +1,118 @@
+.tours {
+  margin-top: 6rem;
+}
+.container__tours {
+  display: grid;
+  grid-template-rows: repeat((2, minmax(30rem, min-content)));
+  grid-auto-flow: dense;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+  justify-content: center;
+  margin: 3rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: repeat((4, minmax(30rem, min-content)));
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin: 0;
+  }
+
+  &-card--1 {
+    grid-column: 1 / span 2;
+    background-image: url("../img/hadrians-wall.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.5);
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / span 3;
+    }
+    @media only screen and (max-width: $bp-small) {
+      box-shadow: none;
+    }
+  }
+
+  &-card--2 {
+    font-size: 2rem;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.5);
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / span 3;
+      margin-bottom: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      box-shadow: none;
+    }
+  }
+
+  &-card--3 {
+    background-image: url("../img/joy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.5);
+    text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / span 3;
+      grid-row: 3/4;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      box-shadow: none;
+    }
+
+    &-header {
+      font-size: 3rem;
+      color: white;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 0 #000;
+    }
+  }
+
+  &-card--4 {
+    background-image: url("../img/south-west-coast-path-penzance-to-lizard-2.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-row: 2;
+    grid-column: 2 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.5);
+    text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / span 3;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      box-shadow: none;
+    }
+  }
+}
+
+.items {
+  list-style: none;
+  list-style-image: url("../img/SVG/check.svg");
+}
