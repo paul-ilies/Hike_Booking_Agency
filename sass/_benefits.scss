@@ -1,0 +1,90 @@
+.benefits {
+  text-align: center;
+  background-image: linear-gradient(
+      rgba(#fff, 0.9),
+      rgba(#fff, 0.9),
+      rgba(#fff, 0.2)
+    ),
+    url("../img/glaciar_lake.jpg");
+  background-size: cover;
+  background-position: center;
+
+  &__text {
+    &-paragraph {
+      font-size: 1.6rem;
+      line-height: 1.7;
+      text-align: justify;
+      display: block;
+    }
+  }
+
+  &__heading {
+    padding-top: 6rem;
+  }
+
+  &__cards {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+    }
+
+    &-item {
+      flex: 0 0 30rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 2.5rem;
+      margin: 5rem 0;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+
+      @media only screen and (max-width: $bp-large) {
+        flex: 0 0 45%;
+        margin: 2rem;
+      }
+
+      &:not(:last-child) {
+        margin-right: 4rem;
+        @media only screen and (max-width: $bp-large) {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  &__item {
+    &-icon {
+      &--global {
+        width: 10rem;
+        height: 10rem;
+        display: inline-block;
+        fill: #0096ba;
+      }
+
+      &--pictures {
+        width: 10rem;
+        height: 10rem;
+        display: inline-block;
+        fill: #a100ff;
+      }
+
+      &--streetsign {
+        width: 10rem;
+        height: 10rem;
+        display: inline-block;
+        fill: #007bff;
+      }
+
+      &--heart {
+        width: 10rem;
+        height: 10rem;
+        display: inline-block;
+        fill: #1abc9c;
+      }
+    }
+  }
+}

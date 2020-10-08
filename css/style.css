@@ -1,0 +1,583 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  overflow-x: hidden; }
+
+.main {
+  margin-top: -20vh; }
+
+.header {
+  height: 80vh;
+  background-image: url("../img/backgroundheader.jpg");
+  background-size: 100% 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0%, 100% 87%, 0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      clip-path: none;
+      height: 70vh; } }
+  .header__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff; }
+
+.color {
+  color: #008b8b; }
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-transform: uppercase; }
+  @media only screen and (max-width: 37.5em) {
+    .topnav {
+      flex-direction: column; } }
+
+.topnav a {
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: #f2f2f2;
+  padding: 2.5rem 3rem; }
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: #008b8b; }
+  @media only screen and (max-width: 37.5em) {
+    .topnav a:hover {
+      background-color: #333; } }
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #2ecc71;
+  color: white; }
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none; }
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 37.5em) {
+  .topnav a {
+    display: none; }
+  .topnav a.icon {
+    display: flex;
+    margin: 0 auto; } }
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 37.5em) {
+  .topnav.responsive {
+    position: relative; }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left; } }
+
+.heading-1 {
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  text-transform: uppercase;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-1 {
+      font-size: 4rem;
+      letter-spacing: 2rem; } }
+
+.heading-2 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  letter-spacing: 1.3rem;
+  color: #008b8b;
+  text-transform: uppercase;
+  text-align: center; }
+
+.heading-3 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #008b8b;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1rem; }
+
+.heading-4 {
+  font-size: 2rem;
+  color: #008b8b; }
+
+.tours__header {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0 4rem;
+  font-weight: 900; }
+
+.container__tours-card--1-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .container__tours-card--1-content_header {
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 #000; }
+
+.bg-video {
+  position: absolute;
+  top: -20rem;
+  left: 0;
+  height: 110%;
+  max-width: 100%;
+  z-index: -1;
+  opacity: 0.15; }
+  .bg-video__content {
+    height: 120%;
+    width: 100%;
+    object-fit: cover; }
+
+.btn__price {
+  background-color: #fff;
+  font-size: 3rem;
+  padding-left: 2rem;
+  color: #777777; }
+  @media only screen and (max-width: 75em) {
+    .btn__price {
+      font-size: 2rem; } }
+  .btn__price-span {
+    background-color: #008b8b;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff; }
+  .btn__price:link {
+    text-decoration: none; }
+
+.btn__tours {
+  margin-right: auto;
+  clip-path: polygon(0 2%, 100% 0%, 97% 100%, 0% 100%); }
+
+.button {
+  box-shadow: inset 0px 1px 3px 0px #91b8b3;
+  background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+  background-color: #768d87;
+  border-radius: 5px;
+  border: 1px solid #566963;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.1rem 2.3rem;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #2b665e;
+  outline: none; }
+  .button:hover {
+    background: linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+    background-color: #6c7c7c; }
+  .button:active {
+    position: relative;
+    top: 1px; }
+
+a {
+  cursor: pointer; }
+
+.about {
+  margin-top: 25vh;
+  position: relative; }
+  .about__us-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; }
+  .about__mission {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #777777; }
+  .about__values {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .about__values-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      align-self: start;
+      flex: 0 0 50rem;
+      margin: 3rem; }
+      @media only screen and (max-width: 45rem) {
+        .about__values-item {
+          margin: 0;
+          flex: 0 0 35rem; } }
+      .about__values-item--icon {
+        width: 5rem;
+        height: 5rem;
+        fill: #008b8b;
+        margin: 2.5rem 0; }
+    .about__values--paragraph {
+      font-size: 1.5rem;
+      color: #777777;
+      margin: 0 2rem;
+      text-align: center; }
+      @media only screen and (max-width: 45rem) {
+        .about__values--paragraph {
+          text-align: justify; } }
+
+.benefits {
+  text-align: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2)), url("../img/glaciar_lake.jpg");
+  background-size: cover;
+  background-position: center; }
+  .benefits__text-paragraph {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    text-align: justify;
+    display: block; }
+  .benefits__heading {
+    padding-top: 6rem; }
+  .benefits__cards {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap; }
+    @media only screen and (max-width: 37.5em) {
+      .benefits__cards {
+        flex-direction: column; } }
+    .benefits__cards-item {
+      flex: 0 0 30rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 2.5rem;
+      margin: 5rem 0;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      @media only screen and (max-width: 68.75em) {
+        .benefits__cards-item {
+          flex: 0 0 45%;
+          margin: 2rem; } }
+      .benefits__cards-item:not(:last-child) {
+        margin-right: 4rem; }
+        @media only screen and (max-width: 68.75em) {
+          .benefits__cards-item:not(:last-child) {
+            margin-right: 2rem; } }
+  .benefits__item-icon--global {
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+    fill: #0096ba; }
+  .benefits__item-icon--pictures {
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+    fill: #a100ff; }
+  .benefits__item-icon--streetsign {
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+    fill: #007bff; }
+  .benefits__item-icon--heart {
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+    fill: #1abc9c; }
+
+.tours {
+  margin-top: 6rem; }
+
+.container__tours {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(30rem, min-content));
+  grid-auto-flow: dense;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+  justify-content: center;
+  margin: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .container__tours {
+      grid-template-rows: repeat(4, minmax(30rem, min-content)); } }
+  @media only screen and (max-width: 37.5em) {
+    .container__tours {
+      margin: 0; } }
+  .container__tours-card--1 {
+    grid-column: 1 / span 2;
+    background-image: url("../img/hadrians-wall.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5); }
+    @media only screen and (max-width: 56.25em) {
+      .container__tours-card--1 {
+        grid-column: 1 / span 3; } }
+    @media only screen and (max-width: 37.5em) {
+      .container__tours-card--1 {
+        box-shadow: none; } }
+  .container__tours-card--2 {
+    font-size: 2rem;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5); }
+    @media only screen and (max-width: 56.25em) {
+      .container__tours-card--2 {
+        grid-column: 1 / span 3;
+        margin-bottom: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .container__tours-card--2 {
+        box-shadow: none; } }
+  .container__tours-card--3 {
+    background-image: url("../img/joy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5);
+    text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .container__tours-card--3 {
+        grid-column: 1 / span 3;
+        grid-row: 3/4; } }
+    @media only screen and (max-width: 37.5em) {
+      .container__tours-card--3 {
+        box-shadow: none; } }
+    .container__tours-card--3-header {
+      font-size: 3rem;
+      color: white;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 0 #000; }
+  .container__tours-card--4 {
+    background-image: url("../img/south-west-coast-path-penzance-to-lizard-2.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-row: 2;
+    grid-column: 2 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5);
+    text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .container__tours-card--4 {
+        grid-column: 1 / span 3; } }
+    @media only screen and (max-width: 37.5em) {
+      .container__tours-card--4 {
+        box-shadow: none; } }
+
+.items {
+  list-style: none;
+  list-style-image: url("../img/SVG/check.svg"); }
+
+.section-book {
+  padding: 30rem; }
+  @media only screen and (max-width: 56.25em) {
+    .section-book {
+      padding: 2.4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-book {
+      padding: 0; } }
+
+.book {
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5); }
+  @media only screen and (max-width: 37.5em) {
+    .book {
+      box-shadow: none;
+      background-image: none; } }
+  .book__form {
+    position: relative;
+    height: 100vh; }
+    @media only screen and (max-width: 75em) {
+      .book__form {
+        display: flex;
+        justify-content: center; } }
+    @media only screen and (max-width: 68.75em) {
+      .book__form {
+        width: 100%;
+        height: 70vh;
+        padding: 2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .book__form {
+        width: 100%; } }
+    @media only screen and (max-width: 37.5em) {
+      .book__form {
+        padding: 0;
+        margin: 3rem 0; } }
+
+.form-control {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column; }
+  .form-control__label {
+    color: #777;
+    display: block;
+    font-size: 1.6rem;
+    padding: 0; }
+
+.form-control input,
+textarea {
+  border: 2px solid #f0f0f0; }
+
+.form-control input,
+textarea,
+small,
+label {
+  border-radius: 4px;
+  width: 50%;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-size: 1.4rem;
+  font-family: inherit;
+  margin: 0 auto; }
+  @media only screen and (max-width: 75em) {
+    .form-control input,
+    textarea,
+    small,
+    label {
+      width: 100%; } }
+  .form-control input:focus,
+  textarea:focus,
+  small:focus,
+  label:focus {
+    outline: 0;
+    border-color: #777; }
+
+.form-control.success input {
+  border-color: #2ecc71; }
+
+.form-control.error input {
+  border-color: #e74c3c; }
+
+.form-control.success textarea {
+  border-color: #2ecc71; }
+
+.form-control.error textarea {
+  border-color: #e74c3c; }
+
+.form-control small {
+  color: #e74c3c;
+  visibility: hidden; }
+
+.form-control.error small {
+  visibility: visible; }
+
+small {
+  font-size: 1.4rem; }
+
+.form_control {
+  position: relative; }
+
+.form_container button {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%); }
+
+.form__header {
+  padding-top: 4rem; }
+
+.footer {
+  background-color: #333;
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  color: white; }
+  @media only screen and (max-width: 75em) {
+    .footer {
+      flex-direction: column; } }
+  .footer__navigation {
+    border-top: 1px solid #f7f7f7;
+    padding: 0 1rem;
+    align-items: center; }
+    @media only screen and (max-width: 75em) {
+      .footer__navigation {
+        margin-top: 2rem; } }
+  .footer__logo {
+    width: 20rem;
+    height: 20rem;
+    transition: all 0.3s; }
+    @media only screen and (max-width: 75em) {
+      .footer__logo {
+        width: 15rem;
+        height: 15rem; } }
+    .footer__logo:hover {
+      transform: scale(1.3); }
+      @media only screen and (max-width: 75em) {
+        .footer__logo:hover {
+          transform: none; } }
+  .footer__list {
+    list-style: none;
+    display: flex;
+    padding: 0; }
+    @media only screen and (max-width: 50rem) {
+      .footer__list {
+        display: flex;
+        flex-direction: column;
+        text-align: center; } }
+  .footer__item:not(:last-child) {
+    margin-right: 2.5rem; }
+    @media only screen and (max-width: 50rem) {
+      .footer__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 1rem; } }
+  .footer__link:link, .footer__link:visited {
+    text-decoration: none;
+    color: #f7f7f7;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all 0.2s;
+    background-color: #333; }
+  .footer__link:hover, .footer__link:active {
+    color: #008b8b;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(-5deg) scale(1.3); }
+  .footer__copyright {
+    border-top: 1px solid #f7f7f7;
+    padding: 1.5rem 0;
+    text-align: center; }
