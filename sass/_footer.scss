@@ -31,13 +31,7 @@
       height: 15rem;
     }
 
-    &:hover {
-      transform: scale(1.3);
-
-      @media only screen and (max-width: $bp-largest) {
-        transform: none;
-      }
-    }
+    
   }
 
   &__list {

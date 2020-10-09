@@ -7,9 +7,11 @@
     "watch-sass": "node-sass sass/main.scss css/style.css --watch",
     "compile-sass": "node-sass sass/main.scss css/style.comp.css",
     "concat-css": "concat -o css/style.concat.css css/style.comp.css",
-    "compress-css": "node-sass css/style.concat.css css/style.css --output-style compressed",
-    "build-css": "npm-run-all compile-sass concat-css compress-css"
+    "prefix-css": "postcss css/style.comp.css --use autoprefixer -o css/style.prefix.css",
+    "compress-css": "node-sass css/style.prefix.css css/style.concat.css css/style.css --output-style compressed",
+    "build-css": "npm-run-all compile-sass concat-css css/style.prefix.css compress-css"
   },
+  "browserslist": "last 4 versions",
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -20,6 +22,7 @@
     "concat": "^1.0.3",
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^8.0.0"
+    "postcss-cli": "^8.1.0",
+    "postcss-gap-properties": "^2.0.0"
   }
 }

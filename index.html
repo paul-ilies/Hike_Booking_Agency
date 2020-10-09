@@ -10,13 +10,14 @@
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
 
   <link rel="shortcut icon" type="image/png" href="img/Letter.png" />
 
   <title>Hike Adventurous | Exciting tours for adventurous people</title>
 </head>
 
-<body class="container">
+<body >
   <!-- --------------------------------- -->
   <div class="topnav" id="myTopnav">
     <a href="#home" class="active">Home</a>
@@ -38,15 +39,15 @@
     <div class="header__text">
       <h1 class="heading-1 ">
         <span data-aos="fade-right"> Think </span>
-       <br> 
-       <span data-aos="fade-right" data-aos-delay="700" class="color"><em> no box required</em></span>
-       <br>
-       <span data-aos="fade-left" data-aos-delay="300">Outside</span>
+        <br>
+        <span data-aos="fade-right" data-aos-delay="700" class="color"><em> no box required</em></span>
+        <br>
+        <span data-aos="fade-left" data-aos-delay="300">Outside</span>
       </h1>
-      
-      
-      <a href="#tours" class="button button__header" data-aos="flip-left"
-        data-aos-easing="ease-out-cubic" data-aos-delay="900">Discover our
+
+
+      <a href="#tours" class="button button__header" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+        data-aos-delay="900">Discover our
         tours</a>
     </div>
   </header>
@@ -231,61 +232,43 @@
     </section>
 
 
-    <section class="section-book" id="form">
+    <section class="section__form">
 
-      <div class="book-container" data-aos="zoom-out" data-aos-duration="500">
+      <div class="section__form-container">
+        
 
-        <div class="book">
-          <div class="book__form">
+        <form action="#" class="section__form-container-form" id="form">
+          <h2 class="heading-3 section__form-container-form--header">Start booking now</h2>
 
-
-            <form action="#" class="form form_container" id="form">
-              <h2 class="heading-3 form__header">Start booking now</h2>
-
-
-              <div class="form-control">
-                <label for="first_name" class="form-control__label" id="firstNameLabel">First Name</label>
-                <input type="text" class="form__input" placeholder="First Name" id="first_name">
-                <small>Error message</small>
-              </div>
-
-
-
-              <div class="form-control">
-                <label for="last_name" class="form-control__label">Last Name</label>
-                <input type="text" class="form__input" placeholder="Last Name" id="last_name">
-                <small>Error message</small>
-              </div>
-
-              <div class="form-control">
-                <label for="email" class="form-control__label">E-mail adress</label>
-                <input type="email" class="form-control__input" placeholder="Email" id="email">
-                <small>Error message</small>
-              </div>
-
-              <div class="form-control">
-                <label for="book" class="form-control__label textarea_label"> e.g. how many people, specific
-                  requirements
-                  etc.</label>
-                <textarea class="form-control__textarea" name="text" id="textfield" rows="5"
-                  placeholder="Your comments"></textarea>
-                <small>Error message</small>
-              </div>
-
-
-              <button type="submit" class="button form_button">Send Request</button>
-
-
-
-
-
-            </form>
+          <div class="section__form-container-form-control">
+            <label for="first_name" class="section__form-container-form-control--label" >First Name</label>
+            <input type="text" class="section__form-container-form-control--input" placeholder="First Name" id="first_name">
+            <small class="section__form-container-form-control--small">Error message</small>
           </div>
-        </div>
 
-      </div>
+          <div class="section__form-container-form-control">
+            <label for="last_name" class="section__form-container-form-control--label" >Last Name</label>
+            <input type="text" class="section__form-container-form-control--input" placeholder="Last Name" id="last_name">
+            <small class="section__form-container-form-control--small">Error message</small>
+          </div>
+
+          <div class="section__form-container-form-control">
+            <label for="email" class="section__form-container-form-control--label" >E-mail adress</label>
+            <input type="email" class="section__form-container-form-control--input" placeholder="Email" id="email">
+            <small class="section__form-container-form-control--small">Error message</small>
+          </div>
+
+          <div class="section__form-container-form-control">
+            <label for="textfield" class="section__form-container-form-control--label" >E-mail adress</label>
+            <textarea name="text" id="textfield" placeholder="Please text your request" class="section__form-container-form-control--input"></textarea>
+            <small class="section__form-container-form-control--small">Error message</small>
+          </div>
+          
+          <div class="section__form-container-form-control">
+            <button type="submit" class="button ">Send Request</button>
+          </div>
+        </form>
     </section>
-
   </main>
 
   <footer class="footer">
@@ -315,6 +298,7 @@
   <script>
     AOS.init();
   </script>
+ 
 </body>
 
 </html>
