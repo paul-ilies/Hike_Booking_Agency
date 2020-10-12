@@ -77,6 +77,7 @@ form.addEventListener('submit', function (e) {
     checkEmail(email);
     checkLength(textField, 10,100);
     
+    
 })
 
 
@@ -92,6 +93,10 @@ function myFunction() {
       x.className = "topnav";
     }
   }
+
+
+ 
+
 
 
 
